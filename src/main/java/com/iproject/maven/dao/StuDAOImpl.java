@@ -13,11 +13,16 @@ public class StuDAOImpl implements StuDAO{
 	public List<StuVO> stulist(){
 		List<StuVO> stu = new ArrayList<StuVO>();
 		
-		StuVO stu1 = new StuVO();
-		stu1.setId(001);
-		stu1.setName("小明");
-		stu1.setScore(99);
-		stu.add(stu1);
+		try {
+			StuVO stu1 = new StuVO();
+			stu1.setId(001);
+			stu1.setName("小明");
+			stu1.setScore(99);
+			stu.add(stu1);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		StuVO stu2 = new StuVO();
 		stu2.setId(002);
